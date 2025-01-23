@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rethink Sans", Verdana, sans-serif;
+}
+
+*::selection {
+  background: #a4d5f0;
+  color: #ffffff;
+}
+*::-moz-selection {
+  background: #a4d5f0;
+  color: #ffffff;
+}
+*::-webkit-selection {
+  background: #a4d5f0;
+  color: #ffffff;
+}
+
+:root {
+  --color-black: #11181c;
+  --color-slate: #687076;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/*  Main Container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/*  Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #dfe3e6;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.disabled a {
+  cursor: not-allowed;
+  pointer-events: none !important;
+}
+
+.navbar-content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-content .nav-item a {
+  text-decoration: none;
+  color: var(--color-slate);
+}
+
+.navbar-content .nav-item a:hover {
+  color: var(--color-black);
+}
+
+.navbar-content .nav-item {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-content .active a {
+  color: var(--color-black);
+}
+
+/* Body Start */
+.intro {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.intro-text .intro-hero {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.intro-text .intro-desc {
+  font-size: 1.1rem;
+  line-height: 150%;
+  color: var(--color-slate);
+  margin: 8px 0px;
+}
+
+.jobs {
+  margin-bottom: 24px;
+}
+
+.job-card {
+  max-width: 420px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.job-img {
+  width: 64px;
+}
+
+.job-card .job-img img {
+  width: 100%;
+}
+
+.job-card .job-desc {
+  font-size: 1.1rem;
+  line-height: 120%;
+  color: var(--color-slate);
+}
+
+.job-card .job-desc .job-title {
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.job-card .job-desc .job-tenure {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.home-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.post-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-black);
+  margin: 1.5rem 0px 0.5rem 0;
+}
+
+/* Projects Section */
+.container .project-showcase {
+  /* padding: 0px 50px; */
+}
+
+.project-showcase .project-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0px;
+}
+
+.project-row .project-card {
+  width: 45%;
+  padding: 12px 20px;
+  background: #f4f5f4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.project-row .project-card:hover {
+  cursor: pointer;
+  background-color: #a4d5f0;
+}
+
+.project-card .project-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 120%;
+  margin-bottom: 8px;
+  color: var(--color-black);
+}
+
+.project-card .project-desc {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 120%;
+  color: var(--color-slate);
+}
+
+/* Posts Section */
+.post-list .list-item {
+  margin-bottom: 12px;
+}
+
+.post-list .list-item h3 {
+  font-size: 1.2rem;
+  color: var(--color-black);
+  font-weight: normal;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-list .list-item h3 a {
+  color: #1197d1;
+  text-decoration: none;
+}
+
+.post-list .list-item h3 a:hofer {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.post-list .list-item h3 .item-date {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.post-list .list-item .item-tags {
+  display: flex;
+  gap: 12px;
+  padding: 4px 0px;
+}
+
+.post-list .list-item .item-tags .tag {
+  background: #99a5ac;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
+.post-list .list-item .item-tags .tag:hover {
+  background: #1197d1;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
+.post-list .list-item .item-tags .tag a {
+  color: white;
+  text-decoration: none;
+}
+
+.post-list .list-item .item-desc {
+  font-size: 1.1rem;
+  color: var(--color-slate);
+}
+
+/* Single Page */
+
+.post-area {
+  padding: 24px 0px;
+}
+
+.post-area .post-title {
+  color: var(--color-black);
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title .post-date {
+  font-size: 1rem;
+  color: var(--color-slate);
+}
+
+.post-area .post-title .post-tags {
+  font-size: 1rem;
+  display: flex;
+  gap: 12px;
+  padding: 4px 0px;
+  align-self: center;
+}
+
+.post-area .post-title .post-tags .tag {
+  background: #99a5ac;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
+.post-area .post-title .post-tags .tag:hover {
+  background: #1197d1;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
+.post-area .post-title .post-tags .tag a {
+  color: white;
+  text-decoration: none;
+}
+
+.post-area .post-desc {
+  background-color: #bce1f5;
+  margin: 20px 0px;
+  padding: 10px;
+  color: var(--color-slate);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 1.1rem;
+  line-height: 150%;
+  color: var(--color-slate);
+}
+
+.post-content hr {
+  border-top: 1px solid #dfe3e6;
+  margin-bottom: 20px;
+}
+
+.post-content img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-content pre {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.post-content pre code,
+.post-content pre code span {
+  font-family: "Inconsolata";
+}
+
+.post-content ul {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.post-content p,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  margin: 0px 0px 20px 0px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  color: var(--color-black);
+  line-height: 120%;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-text {
+  color: var(--color-slate);
+  padding: 10px;
+  text-align: center;
+}
+
+footer .footer-links a {
+  color: #4cc9fe;
+  padding: 6px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-showcase .project-row {
+    flex-direction: column;
+  }
+
+  .project-row .project-card {
+    width: 100%;
+  }
+}
